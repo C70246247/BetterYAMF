@@ -41,7 +41,7 @@ A fork of reYAMF (forked from [reYAMF](https://github.com/JuanArton/reYAMF), act
 - Some app restart while being resized. (Will fix by adding lock DPI option)
 
 ## TODO
-
+- Fix landscape mode performance.
 
 ## Contributors List
 <!-- readme: contributors -start -->
