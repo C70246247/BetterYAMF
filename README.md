@@ -4,6 +4,9 @@
 
 A fork of reYAMF (forked from [reYAMF](https://github.com/JuanArton/reYAMF), actually), with my changes.
 
+## Preview
+![Preview](Preview/preview.gif)
+
 ## Requirements
 - Android 13+ (>= api 33)
 - LSPosed
@@ -42,6 +45,7 @@ A fork of reYAMF (forked from [reYAMF](https://github.com/JuanArton/reYAMF), act
 
 ## TODO
 - Fix landscape mode performance.
+- Fix collapse status app icon show issue.
 
 ## Contributors List
 <!-- readme: contributors -start -->
