@@ -1,4 +1,3 @@
-[![Chat](https://img.shields.io/badge/Chat-Telegram-blue.svg?logo=telegram)](https://t.me/+HjGegWE9jBM0N2Rl)
 [![Size](https://img.shields.io/github/languages/code-size/JuanArton/reYAMF)](https://github.com/JuanArton/reYAMF)
 
 # BetterYAMF
@@ -49,6 +48,13 @@ A fork of reYAMF (forked from [reYAMF](https://github.com/JuanArton/reYAMF), act
 <table>
 	<tbody>
 		<tr>
+            <td align="center">
+                <a href="https://github.com/C70246247">
+                    <img src="https://avatars.githubusercontent.com/u/59191002?v=4" width="100;" alt="C70246247"/>
+                    <br />
+                    <sub><b>BuildSession</b></sub>
+                </a>
+            </td>
             <td align="center">
                 <a href="https://github.com/JuanArton">
                     <img src="https://avatars.githubusercontent.com/u/69680526?v=4" width="100;" alt="JuanArton"/>
