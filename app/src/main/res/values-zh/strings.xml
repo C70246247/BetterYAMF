@@ -38,7 +38,7 @@
     <string name="close_butt_desc">点击侧边栏上的此按钮关闭侧边栏</string>
     <string name="restart_butt_desc">或点击此按钮临时关闭侧边栏，侧边栏会在5秒后重新出现</string>
     <string name="reyamf">BetterYAMF</string>
-    <string name="a_yamf_fork">a Better YAMF fork</string>
+    <string name="a_yamf_fork">a reYAMF fork</string>
     <string name="view_type">视图类型</string>
     <string name="dpi_density">DPI 密度</string>
     <string name="flags">高级参数</string>

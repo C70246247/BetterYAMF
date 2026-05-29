@@ -38,7 +38,7 @@
     <string name="close_butt_desc">Close the sidebar using this button on the sidebar</string>
     <string name="restart_butt_desc">Or use this button to close sidebar for 5 seconds. Sidebar will reappaer automatically</string>
     <string name="reyamf">BetterYAMF</string>
-    <string name="a_yamf_fork">a Better YAMF fork</string>
+    <string name="a_yamf_fork">a reYAMF fork</string>
     <string name="view_type">View Type</string>
     <string name="dpi_density">DPI Density</string>
     <string name="flags">Flags</string>

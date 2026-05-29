@@ -27,7 +27,7 @@ A fork of reYAMF (forked from [reYAMF](https://github.com/JuanArton/reYAMF), act
 - Select Launcher3 or pixel launcher in LSP module working area.
 
 ## How to install
-- Grab the latest APK from the [releases section](https://github.com/JuanArton/YAMFsquared/releases)
+- Grab the latest APK from the [releases section](https://github.com/C70246247/BetterYAMF/releases)
 - Install it
 - Enable module in LSPosed
 - Go to Accessibility Settings and enable BetterYAMF accessibility service

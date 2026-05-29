@@ -11,7 +11,7 @@ plugins {
 
 android {
     val buildTime = System.currentTimeMillis()
-    val baseVersionName = "1.1.1"
+    val baseVersionName = "Beta1.0"
     namespace = "com.buildsession.betterYAMF"
     compileSdk = 36
 
@@ -20,7 +20,7 @@ android {
         minSdk = 33
         targetSdk = 36
         versionCode = 2
-        versionName = "$baseVersionName-git.$gitHash${if (isDirty) "-dirty" else ""}"
+        versionName = baseVersionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
