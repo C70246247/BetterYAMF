@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.Material3.DynamicColors.DayNight">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingBottom="?dialogPreferredPadding"
+        tools:ignore="PrivateResource">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:liftOnScrollColor="?attr/liftOnScrollColor"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginTop="20dp"
+                app:layout_scrollFlags="scroll|enterAlways">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textColor="?android:textColor"
+                        android:text="@string/reyamf"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="?android:textColor"
+                        android:text="@string/a_yamf_fork"
+                        android:textStyle="italic"
+                        android:gravity="start"/>
+                </LinearLayout>
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/m3_appbar_expanded_title_margin_horizontal"
+            android:paddingBottom="?dialogPreferredPadding"
+            tools:ignore="PrivateResource">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvStatus"
+                style="@style/Widget.Material3.CardView.Elevated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:outlineAmbientShadowColor="?colorPrimary"
+                android:outlineSpotShadowColor="?colorPrimary"
+                android:stateListAnimator="@null"
+                android:layout_marginTop="32dp"
+                app:cardBackgroundColor="?colorPrimary"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="?dialogPreferredPadding">
+
+                    <ImageView
+                        android:id="@+id/iv_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_round_check_circle_24"
+                        app:tint="?colorOnPrimary"
+                        tools:ignore="ContentDescription" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_active"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_toEndOf="@id/iv_icon"
+                        android:fontFamily="sans-serif-medium"
+                        android:textAppearance="?textAppearanceTitleMedium"
+                        android:textColor="?colorOnPrimary"
+                        android:textSize="16sp"
+                        tools:text="Magisk: activated" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvVersion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_active"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toEndOf="@id/iv_icon"
+                        android:textAppearance="?textAppearanceBodyMedium"
+                        android:textColor="?colorOnPrimary"
+                        tools:text="1.2.3" />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="?attr/cardBackgroundColor"
+                app:strokeWidth="0dp"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="?dialogPreferredPadding">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/open_count"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvOpenCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/build_type"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvBuildType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_system_version"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/systemVersion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvSideBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                app:strokeWidth="0dp"
+                app:cardBackgroundColor="?attr/cardBackgroundColor"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    app:cardBackgroundColor="?attr/cardBackgroundColor"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tvSideBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/enable_sidebar"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/msEnableSideBar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/msEnableSideBar" />
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/msEnableSideBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/innerClSidebar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintTop_toBottomOf="@+id/msEnableSideBar">
+
+                        <TextView
+                            android:id="@+id/tvLaunchAtStartup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/launch_at_startup"
+                            app:layout_constraintBottom_toBottomOf="@+id/msSideBar"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/msSideBar" />
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/msSideBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvSidebarPosition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sidebar_position"
+                            app:layout_constraintBottom_toBottomOf="@+id/msSideBarPosition"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/msSideBarPosition" />
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/msSideBarPosition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/msSideBar" />
+
+                        <TextView
+                            android:id="@+id/tvSidebarTransparency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sidebar_transparency"
+                            android:layout_marginTop="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/msSideBarPosition" />
+
+                        <com.google.android.material.slider.Slider
+                            android:id="@+id/sliderTransparency"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:stepSize="1"
+                            android:value="80"
+                            android:valueFrom="30"
+                            android:valueTo="100"
+                            app:layout_constraintEnd_toStartOf="@+id/tvTransparencyValue"
+                            app:layout_constraintTop_toBottomOf="@+id/tvSidebarTransparency" />
+
+                        <TextView
+                            android:id="@+id/tvTransparencyValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:text="@string/_80"
+                            android:gravity="center"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/sliderTransparency"
+                            app:layout_constraintBottom_toBottomOf="@+id/sliderTransparency"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btLaunchSideBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/launch_sidebar"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/sliderTransparency" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

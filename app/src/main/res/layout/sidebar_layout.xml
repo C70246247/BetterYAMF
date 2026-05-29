@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/rootSidebar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top|start"
+    android:animateLayoutChanges="false"
+    android:background="@android:color/transparent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View
+        android:id="@+id/clickMask"
+        android:layout_width="20dp"
+        android:layout_height="75dp"
+        android:elevation="2dp"
+        android:layout_marginStart="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvSideBar"
+        android:layout_width="3.5dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="5dp"
+        app:cardBackgroundColor="?attr/colorSurface"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/transparentOutline"
+        app:strokeWidth="0dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

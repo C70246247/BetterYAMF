@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_warning">#FBC02D</color>
+    <color name="black">#FF000000</color>
+    <color name="accentColor">@android:color/system_accent1_500</color>
+
+    //dark theme
+    <color name="darkThemeText">#cdcccc</color>
+    <color name="transparentOutline">#20000000</color>
+    <color name="resizeOutline">#60000000</color>
+</resources>

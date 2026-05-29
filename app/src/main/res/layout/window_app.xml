@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:elevation="8dp"
+    android:background="@null"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:theme="@style/Theme.Material3.DayNight">
+
+    <View
+        android:id="@+id/rootClickMask"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/rlBarControllerBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/cvParent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvParent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvBar"
+            android:layout_width="100dp"
+            android:layout_height="4dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="7dp"
+            android:backgroundTint="#ffffff"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="2dp"
+            app:strokeWidth="0dp" />
+
+        <View
+            android:id="@+id/cvBarClickMask"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            app:strokeWidth="0dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBarControllerSide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/rlBarControllerBottom"
+        app:layout_constraintStart_toEndOf="@id/cvParent"
+        app:layout_constraintTop_toTopOf="@+id/cvParent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvBarSide"
+            android:layout_width="4dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="7dp"
+            android:backgroundTint="#ffffff"
+            android:layout_marginVertical="10dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="2dp"
+            app:strokeWidth="0dp" />
+
+        <View
+            android:id="@+id/cvBarSideClickMask"
+            android:layout_width="30dp"
+            android:layout_height="100dp"
+            android:background="@android:color/transparent"
+            app:strokeWidth="0dp" />
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:backgroundTint="@android:color/transparent"
+        android:elevation="8dp"
+        android:paddingBottom="15dp"
+        android:visibility="invisible"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:cardBackgroundColor="?attr/colorSurface"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/transparentOutline"
+        app:strokeWidth="0dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvapp_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:layout_marginVertical="2dp"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            app:cardBackgroundColor="?attr/colorSurface">
+
+            <ImageView
+                android:id="@+id/app_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@string/collapsed_app_icon"
+                tools:srcCompat="@tools:sample/avatars" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:cardBackgroundColor="?attr/colorSurface"
+            app:strokeWidth="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorSurface"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <ImageButton
+                    android:id="@+id/ibSuper"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:background="@null"
+                    android:src="@drawable/three_dot_horiz"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <SurfaceView
+                    android:id="@+id/viewSurface"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ibSuper" />
+
+                <TextureView
+                    android:id="@+id/viewTexture"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ibSuper" />
+
+                <RelativeLayout
+                    android:id="@+id/v_sizePreviewer"
+                    android:layout_width="200dp"
+                    android:layout_height="300dp"
+                    android:background="@drawable/a_bg"
+                    android:elevation="5dp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ibSuper" />
+
+                <View
+                    android:id="@+id/viewFullScreenMask"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#80000000"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvFullScreenPrompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Release to Full Screen"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clSuperLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="?attr/colorSurface"
+                    android:orientation="vertical"
+                    android:visibility="invisible"
+                    android:weightSum="2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageButton
+                        android:id="@+id/ib_superClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:contentDescription="@string/minimize_desc"
+                        android:src="@drawable/ic_close_24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageButton
+                                android:id="@+id/ib_minimize"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:contentDescription="@string/minimize_desc"
+                                android:src="@drawable/ic_minimize" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/minimize" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageButton
+                                android:id="@+id/ib_fullscreen"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:contentDescription="@string/fullscreen_desc"
+                                android:src="@drawable/ic_maximize" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/fullscreen" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+                            <ImageButton
+                                android:id="@+id/ib_collapse"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:contentDescription="@string/fullscreen_desc"
+                                android:src="@drawable/ic_collapse" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/collapse" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+                            <ImageButton
+                                android:id="@+id/ib_close"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:contentDescription="@string/close_desc"
+                                android:src="@drawable/ic_close" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/close" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageButton
+        android:id="@+id/ibRightResize"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/resize_desc"
+        android:elevation="10dp"
+        android:layout_marginStart="-20dp"
+        android:layout_marginBottom="-15dp"
+        app:layout_constraintBottom_toTopOf="@+id/rlBarControllerBottom"
+        app:layout_constraintStart_toStartOf="@+id/rlBarControllerSide" />
+</androidx.constraintlayout.widget.ConstraintLayout>
